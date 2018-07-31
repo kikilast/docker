@@ -1,4 +1,19 @@
 ﻿# Docker 
+
+## Docker basic concept
+
+
+### install
+
+
+### pull
+
+
+### run
+
+
+### 
+
 ## Docker Registry
 可以用來存放docker image的地方，分為公有和私有。公有的部分[Dockerhub](https://hub.docker.com), [Quay](https://quay.io)都是可以存放映像檔的地方，是可以公開存取的，直接把映像檔拉下來即可使用，私有的部分，目前三大雲服務都有提供放置映像檔的地方，*azure-azure container registry*, *aws-amazon elastic container registry*, *gcp-container registry*。另外也可以在本地端架設私有的存放庫。
 
