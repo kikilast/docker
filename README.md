@@ -9,7 +9,7 @@ Windows的部分
 因為底層的模式與Linux不同
 所以無法直接使用
 需要安裝額外的程式
-[docker for windows](https://docs.docker.com/docker-for-windows/install/#install-docker-for-windows-desktop-app)
+[docker for windows](https://docs.docker.com/docker-for-windows/install/)
 
 Linux的安裝套件中幾乎都有可以直接安裝docker的指令
 可以直接call指令安裝
@@ -30,6 +30,7 @@ sudo usermod -aG docker $(whoami)
 指令前面就可以不用加`sudo`了
 
 ### pull
+
 
 
 ### run
