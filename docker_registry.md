@@ -57,7 +57,7 @@ docker push localhost:5000/mysql
 
 再去UI上確認，就會多一個repository
 
-*無法刪除單一映像檔，只能將整個repository刪除或是刪除標籤*
+*無法刪除單一版本的映像檔，只能將整個repository刪除或是刪除標籤*
 
 ### 雲端(公有 dockerhub)
 
@@ -70,8 +70,10 @@ az acr login --name mygistry
 或是
 
 ```cmd
-docker login myregistry.azurecr.io -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -p myPassword
-  ```
+docker login myregistry.azurecr.io -u <username> -p <password>
+```
+
+建議可以使用 `--password-stdin` 避免有歷史紀錄或是log
   
 在將映像推送至您的登錄之前，必須使用 ACR 登入伺服器名稱來標記映像。 使用 docker tag 命令來標記映像。 將登入伺服器取代為您先前記錄的登入伺服器名稱。
 
@@ -90,3 +92,5 @@ docker push <username>/<repo name>:<Tag name>
 ```cmd
 docker push <login server>/<repo name>:<Tag name>
 ```
+## Source:
+[快速入門：使用 Azure 入口網站建立容器登錄](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-portal)
