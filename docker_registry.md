@@ -57,8 +57,6 @@ docker push localhost:5000/mysql
 
 再去UI上確認，就會多一個repository
 
-*無法刪除單一版本的映像檔，只能將整個repository刪除或是刪除標籤*
-
 ### 雲端(公有 dockerhub)
 
 登入 container registry
