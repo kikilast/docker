@@ -1,20 +1,20 @@
-# Docker Registry
-¥i¥H¥Î¨Ó¦s©ñdocker imageªº¦a¤è¡A¤À¬°¤½¦³©M¨p¦³¡C¤½¦³ªº³¡¤À[Dockerhub](https://hub.docker.com), [Quay](https://quay.io)³£¬O¥i¥H¦s©ñ¬M¹³ÀÉªº¦a¤è¡A¬O¥i¥H¤½¶}¦s¨úªº¡Aª½±µ§â¬M¹³ÀÉ©Ô¤U¨Ó§Y¥i¨Ï¥Î¡A¨p¦³ªº³¡¤À¡A¥Ø«e¤T¤j¶³ªA°È³£¦³´£¨Ñ©ñ¸m¬M¹³ÀÉªº¦a¤è¡A**AZURE-__azure container registry__**, **AWS-__amazon elastic container registry__**, **GCP-__container registry__**¡C¥t¥~¤]¥i¥H¦b¥»¦aºİ¬[³]¨p¦³ªº¦s©ñ®w¡C
+ï»¿# Docker Registry
+å¯ä»¥ç”¨ä¾†å­˜æ”¾docker imageçš„åœ°æ–¹ï¼Œåˆ†ç‚ºå…¬æœ‰å’Œç§æœ‰ã€‚å…¬æœ‰çš„éƒ¨åˆ†[Dockerhub](https://hub.docker.com), [Quay](https://quay.io)éƒ½æ˜¯å¯ä»¥å­˜æ”¾æ˜ åƒæª”çš„åœ°æ–¹ï¼Œæ˜¯å¯ä»¥å…¬é–‹å­˜å–çš„ï¼Œç›´æ¥æŠŠæ˜ åƒæª”æ‹‰ä¸‹ä¾†å³å¯ä½¿ç”¨ï¼Œç§æœ‰çš„éƒ¨åˆ†ï¼Œç›®å‰ä¸‰å¤§é›²æœå‹™éƒ½æœ‰æä¾›æ”¾ç½®æ˜ åƒæª”çš„åœ°æ–¹ï¼Œ**AZURE-__azure container registry__**, **AWS-__amazon elastic container registry__**, **GCP-__container registry__**ã€‚å¦å¤–ä¹Ÿå¯ä»¥åœ¨æœ¬åœ°ç«¯æ¶è¨­ç§æœ‰çš„å­˜æ”¾åº«ã€‚
 
 ## Pratice:
 
-¤½¡B¨p¦³ªºdocker registry ¥¬«Ø¥H¤Î±À°e¬M¹³ÀÉ(¥Hubuntu¬°¨Ò)
+å…¬ã€ç§æœ‰çš„docker registry å¸ƒå»ºä»¥åŠæ¨é€æ˜ åƒæª”(ä»¥ubuntuç‚ºä¾‹)
 
-### ¥»¦aºİ(¨p¦³)
+### æœ¬åœ°ç«¯(ç§æœ‰)
 
-¦w¸Ëdocker
+å®‰è£docker
 
 ```cmd
 sudo apt-get update
 sudo apt-get install docker.io
 ```
 
-¦b¦w¸Ë¦ndocker¤§«á¡A¥H®e¾¹ªº§Î¦¡¨Ó«Ø¥ßdocker registry
+åœ¨å®‰è£å¥½dockerä¹‹å¾Œï¼Œä»¥å®¹å™¨çš„å½¢å¼ä¾†å»ºç«‹docker registry
 
 ```cmd
 docker run -d -p 5000:5000 --restart=always --name registry \
@@ -22,9 +22,9 @@ docker run -d -p 5000:5000 --restart=always --name registry \
 registry:2
 ```
 
-> -v ¬° host »P container ­n¶i¦æ¦P¨Bªº¥Ø¿ı¡A¥D­n¦s©ñ docker images ¸ê®Æ
+> -v ç‚º host èˆ‡ container è¦é€²è¡ŒåŒæ­¥çš„ç›®éŒ„ï¼Œä¸»è¦å­˜æ”¾ docker images è³‡æ–™
 
-¥t¥~¬°¤F¤è«KÀËµø¡A¥i¥H¦A³¡Äİ¤@­Ó®e¾¹ docker registry UI ¨ÓÀËµø¬M¹³ÀÉ
+å¦å¤–ç‚ºäº†æ–¹ä¾¿æª¢è¦–ï¼Œå¯ä»¥å†éƒ¨å±¬ä¸€å€‹å®¹å™¨ docker registry UI ä¾†æª¢è¦–æ˜ åƒæª”
 
 ```cmd
 docker run -d -p 5001:80 \
@@ -33,62 +33,62 @@ docker run -d -p 5001:80 \
 konradkleine/docker-registry-frontend:v2
 ```
 
-§Q¥ÎÂsÄı¾¹¶i¤JUI¨ÓÆ[¹î
+åˆ©ç”¨ç€è¦½å™¨é€²å…¥UIä¾†è§€å¯Ÿ
 
 > http://localhost:5001
 
-±N¬M¹³ÀÉ±À¤W¥»¦aºİªºregistry
-(¦pªG¨S¦³¥i¥H¥ı©Ô¤@­Ó¤½¶}ªº¬M¹³ÀÉ¤U¨Ó)
+å°‡æ˜ åƒæª”æ¨ä¸Šæœ¬åœ°ç«¯çš„registry
+(å¦‚æœæ²’æœ‰å¯ä»¥å…ˆæ‹‰ä¸€å€‹å…¬é–‹çš„æ˜ åƒæª”ä¸‹ä¾†)
 
 ```cmd
 docker pull mysql
 ```
 
-¼Ğ°O¦Û¤vªº¬M¹³ÀÉ
+æ¨™è¨˜è‡ªå·±çš„æ˜ åƒæª”
 ```cmd
 docker tag mysql localhost:5000/mysql
 ```
 
-±Nlocalhost:5000/mysql±À¤W¥»¦aºİªºregistry
+å°‡localhost:5000/mysqlæ¨ä¸Šæœ¬åœ°ç«¯çš„registry
 
 ```cmd
 docker push localhost:5000/mysql
 ```
 
-¦A¥hUI¤W½T»{¡A´N·|¦h¤@­Órepository
+å†å»UIä¸Šç¢ºèªï¼Œå°±æœƒå¤šä¸€å€‹repository
 
-### ¶³ºİ(¤½¦³ dockerhub)
+### é›²ç«¯(å…¬æœ‰ dockerhub)
 
-µn¤J container registry
+ç™»å…¥ container registry
 
 ```cmd
 az acr login --name mygistry
 ```
 
-©Î¬O
+æˆ–æ˜¯
 
 ```cmd
 docker login myregistry.azurecr.io -u <username> -p <password>
 ```
 
-«ØÄ³¥i¥H¨Ï¥Î `--password-stdin` Á×§K¦³¾ú¥v¬ö¿ı©Î¬Olog
+å»ºè­°å¯ä»¥ä½¿ç”¨ `--password-stdin` é¿å…æœ‰æ­·å²ç´€éŒ„æˆ–æ˜¯log
   
-¦b±N¬M¹³±À°e¦Ü±zªºµn¿ı¤§«e¡A¥²¶·¨Ï¥Î ACR µn¤J¦øªA¾¹¦WºÙ¨Ó¼Ğ°O¬M¹³¡C ¨Ï¥Î docker tag ©R¥O¨Ó¼Ğ°O¬M¹³¡C ±Nµn¤J¦øªA¾¹¨ú¥N¬°±z¥ı«e°O¿ıªºµn¤J¦øªA¾¹¦WºÙ¡C
+åœ¨å°‡æ˜ åƒæ¨é€è‡³æ‚¨çš„ç™»éŒ„ä¹‹å‰ï¼Œå¿…é ˆä½¿ç”¨ ACR ç™»å…¥ä¼ºæœå™¨åç¨±ä¾†æ¨™è¨˜æ˜ åƒã€‚ ä½¿ç”¨ docker tag å‘½ä»¤ä¾†æ¨™è¨˜æ˜ åƒã€‚ å°‡ç™»å…¥ä¼ºæœå™¨å–ä»£ç‚ºæ‚¨å…ˆå‰è¨˜éŒ„çš„ç™»å…¥ä¼ºæœå™¨åç¨±ã€‚
 
 ```cmd
 docker tag <image repository name> <login server>/<image name>:<version>
 ```
 
-³æ¯Â§âimage ±À¤Wdockerhub
+å–®ç´”æŠŠimage æ¨ä¸Šdockerhub
 
 ```cmd
 docker push <username>/<repo name>:<Tag name>
 ```
 
-³Ì«á§âimage±À°e¤Wcontainer registry
+æœ€å¾ŒæŠŠimageæ¨é€ä¸Šcontainer registry
 
 ```cmd
 docker push <login server>/<repo name>:<Tag name>
 ```
 ## Source:
-[§Ö³t¤Jªù¡G¨Ï¥Î Azure ¤J¤fºô¯¸«Ø¥ß®e¾¹µn¿ı](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-portal)
+[å¿«é€Ÿå…¥é–€ï¼šä½¿ç”¨ Azure å…¥å£ç¶²ç«™å»ºç«‹å®¹å™¨ç™»éŒ„](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-portal)
