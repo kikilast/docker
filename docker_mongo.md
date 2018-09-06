@@ -36,6 +36,12 @@ db.createUser({
 exit
 ```
 
+進入容器
+```cmd
 docker exec -it some-mongo /bin/bash
+```
 
- mongo 127.0.0.1:27017/test -u root -p 1234
+進Mongo
+```cmd
+mongo 127.0.0.1:27017/test -u root -p 1234
+```
